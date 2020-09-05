@@ -21,7 +21,7 @@
       
    - name: copy conf file
      copy:
-      src: "{{ role_path }}/files/default.conf"
+      src: default.conf"
       dest: /etc/nginx/conf.d/default.conf
       
    - name: reloading nginx
@@ -29,5 +29,5 @@
           
    - name: copy info file
      copy:
-      src: "{{ role_path }}/files/info.php"
+      src: info.php
       dest: /usr/share/nginx/html/info.php
