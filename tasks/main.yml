@@ -1,6 +1,6 @@
 ---
- - name: add repo for php packages
-   command: LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php
+# - name: add repo for php packages
+#   command: LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php
    
 # - name: updating system
 #   apt:
