@@ -1,0 +1,7 @@
+- name: Installing php
+  hosts: all
+  become: yes
+  vars_files:
+    - ./vars/varfile.yml
+  roles:
+    - nginxandphprole
