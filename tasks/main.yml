@@ -1,11 +1,11 @@
 ---
- - name: add repo for php packages
-   apt_repository: repo='ppa:ondrej/php' state=present
+# - name: add repo for php packages
+#   apt_repository: repo='ppa:ondrej/php' state=present
     
- - name: updating system
-   apt:
-     upgrade: yes
-     update_cache: yes
+# - name: updating system
+#   apt:
+#     upgrade: yes
+#     update_cache: yes
       
  - name: install packages
    package: name={{ item }} state=present
@@ -23,11 +23,11 @@
     copy:
       src: default.conf
       dest: /etc/nginx/conf.d/default.conf
-      
-  - name: reloading nginx
-    systemd: name=nginx state=reloaded enabled=yes
           
   - name: copy info file
     copy:
       src: info.php
       dest: /usr/share/nginx/html/info.php
+      
+  - name: reloading nginx
+    systemd: name=nginx state=reloaded enabled=yes
